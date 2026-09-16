@@ -1,4 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
+import backgroundAsset from "@/assets/instapay-background.jpeg.asset.json";
+import instapayLogo from "@/assets/instapay-logo.png";
+import ipnLogo from "@/assets/ipn-logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -16,13 +19,11 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <main className="splash" aria-label="Instapay splash screen">
-      <div className="splash-pattern" aria-hidden="true">
-        <span className="violet-ribbon violet-ribbon-one" />
-        <span className="violet-ribbon violet-ribbon-two" />
-        <span className="orange-ribbon" />
-        <span className="coral-ribbon" />
-      </div>
+    <main
+      className="splash"
+      aria-label="Instapay splash screen"
+      style={{ backgroundImage: `url(${backgroundAsset.url})` }}
+    >
 
       <div className="status-bar" aria-hidden="true">
         <div className="status-left">
@@ -35,14 +36,12 @@ function Index() {
 
       <section className="brand-lockup">
         <p lang="ar" dir="rtl">أهلاً بك في</p>
-        <h1 aria-label="Instapay">INSTAPAY</h1>
+        <h1 className="sr-only">Instapay</h1>
+        <img src={instapayLogo} alt="Instapay" />
       </section>
 
       <footer className="splash-footer">
-        <div className="ipn-mark" aria-label="IPN">
-          <span className="ipn-stripe" />
-          <strong>IPN</strong>
-        </div>
+        <img src={ipnLogo} alt="IPN" />
         <small>V1.12.1</small>
       </footer>
     </main>
