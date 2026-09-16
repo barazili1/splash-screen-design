@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import backgroundAsset from "@/assets/instapay-background.jpeg.asset.json";
 import instapayLogo from "@/assets/instapay-logo.png";
 import ipnLogo from "@/assets/ipn-logo.png";
@@ -67,11 +67,18 @@ function ProgressMark() {
 
 function Index() {
   const [phase, setPhase] = useState<"splash" | "progress">("splash");
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const timer = window.setTimeout(() => setPhase("progress"), 1000);
-    return () => window.clearTimeout(timer);
-  }, []);
+    const showProgress = window.setTimeout(() => setPhase("progress"), 1000);
+    const goHome = window.setTimeout(() => {
+      navigate({ to: "/home" });
+    }, 3000);
+    return () => {
+      window.clearTimeout(showProgress);
+      window.clearTimeout(goHome);
+    };
+  }, [navigate]);
 
   return (
     <main
