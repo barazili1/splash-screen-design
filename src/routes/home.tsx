@@ -17,6 +17,11 @@ import {
 import homeHeader from "@/assets/home-header.jpeg.asset.json";
 import bankLogo from "@/assets/bank-logo.png";
 import ipnLogo from "@/assets/ipn-logo.png";
+import navHome from "@/assets/nav-home.png.asset.json";
+import navSend from "@/assets/nav-send.png.asset.json";
+import navRequest from "@/assets/nav-request.png.asset.json";
+import navBills from "@/assets/nav-bills.png.asset.json";
+import navMenu from "@/assets/nav-menu.png.asset.json";
 
 export const Route = createFileRoute("/home")({
   head: () => ({
@@ -198,20 +203,20 @@ function HomePage() {
 
       <nav className="bottom-nav" aria-label="التنقل">
         <button type="button" className="nav-item active">
-          <HomeIcon strokeWidth={1.8} />
+          <img src={navHome.url} alt="" />
           <span>الرئيسية</span>
         </button>
         <button type="button" className="nav-item" aria-label="ارسال نقود">
-          <ArrowUpRight strokeWidth={1.6} />
+          <img src={navSend.url} alt="" />
         </button>
         <button type="button" className="nav-item" aria-label="طلب دفع">
-          <ArrowDownLeft strokeWidth={1.6} />
+          <img src={navRequest.url} alt="" />
         </button>
         <button type="button" className="nav-item" aria-label="الفواتير">
-          <Receipt strokeWidth={1.6} />
+          <img src={navBills.url} alt="" />
         </button>
         <button type="button" className="nav-item" aria-label="القائمة">
-          <Menu strokeWidth={1.6} />
+          <img src={navMenu.url} alt="" />
         </button>
       </nav>
     </div>
