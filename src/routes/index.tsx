@@ -46,10 +46,11 @@ function ProgressMark() {
         stroke="var(--splash-orange)"
         strokeWidth="5"
         strokeLinecap="round"
-        strokeDasharray="38 245"
+        strokeDasharray="283"
+        transform="rotate(-90 50 50)"
       />
       {/* violet sphere */}
-      <circle cx="50" cy="50" r="37" fill="url(#sphereGrad)" />
+      <circle cx="50" cy="50" r="23.5" fill="url(#sphereGrad)" />
       {/* Instapay chevrons */}
       <g
         fill="none"
@@ -57,6 +58,7 @@ function ProgressMark() {
         strokeWidth="10"
         strokeLinejoin="miter"
         strokeLinecap="butt"
+        transform="translate(50 50) scale(0.635) translate(-50 -50)"
       >
         <path d="M31 33 L52 50 L31 67" />
         <path d="M50 33 L71 50 L50 67" />
