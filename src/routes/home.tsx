@@ -92,47 +92,15 @@ const transactions = [
 function HomePage() {
   return (
     <div className="home" dir="rtl" lang="ar">
-      <header className="home-header">
-        <div className="home-header-shape" aria-hidden="true" />
-        <div className="home-header-row">
-          <div className="home-greeting">
-            <span>مساء الخير</span>
-            <h1>Mohamed</h1>
-          </div>
-          <div className="home-header-actions">
-            <button type="button" className="header-btn" aria-label="طلب دفع">
-              <ArrowDownLeft strokeWidth={2} />
-            </button>
-            <button type="button" className="header-btn" aria-label="الإشعارات">
-              <Bell strokeWidth={2} />
-              <span className="header-badge">15</span>
-            </button>
-          </div>
-        </div>
-      </header>
-
-      <section className="home-banner">
-        <div className="banner-card">
-          <div className="banner-text">
-            <h2>ادفع فواتيرك</h2>
-            <p>Pay your bills</p>
-          </div>
-          <img
-            src={billsIllustration}
-            alt="ادفع فواتيرك"
-            loading="lazy"
-            width={816}
-            height={816}
-          />
-        </div>
-        <span className="dot" aria-hidden="true" />
-      </section>
+      <img
+        className="home-hero"
+        src={homeHeader.url}
+        alt="مساء الخير Mohamed — ادفع فواتيرك"
+        width={1282}
+        height={921}
+      />
 
       <section className="home-section">
-        <div className="section-head">
-          <h2>الحسابات</h2>
-          <button type="button">المزيد</button>
-        </div>
         <div className="account-card">
           <div className="account-top">
             <div className="account-id">
