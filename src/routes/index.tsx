@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import backgroundAsset from "@/assets/instapay-background.jpeg.asset.json";
 import instapayLogo from "@/assets/instapay-logo.png";
 import ipnLogo from "@/assets/ipn-logo.png";
