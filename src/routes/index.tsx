@@ -35,7 +35,7 @@ function ProgressMark() {
       </defs>
 
       {/* white ring */}
-      <circle cx="50" cy="50" r="45" fill="none" stroke="var(--splash-ink)" strokeWidth="7" />
+      <circle cx="50" cy="50" r="45" fill="none" stroke="var(--splash-ink)" strokeWidth="5" />
       {/* orange progress arc */}
       <circle
         className="progress-arc"
@@ -44,12 +44,12 @@ function ProgressMark() {
         r="45"
         fill="none"
         stroke="var(--splash-orange)"
-        strokeWidth="7"
+        strokeWidth="5"
         strokeLinecap="round"
-        strokeDasharray="42 241"
+        strokeDasharray="38 245"
       />
       {/* violet sphere */}
-      <circle cx="50" cy="50" r="34" fill="url(#sphereGrad)" />
+      <circle cx="50" cy="50" r="37" fill="url(#sphereGrad)" />
       {/* Instapay chevrons */}
       <g
         fill="none"
