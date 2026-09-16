@@ -198,20 +198,20 @@ function HomePage() {
 
       <nav className="bottom-nav" aria-label="التنقل">
         <button type="button" className="nav-item active">
-          <HomeIcon strokeWidth={1.8} />
+          <img src={navHome.url} alt="" />
           <span>الرئيسية</span>
         </button>
         <button type="button" className="nav-item" aria-label="ارسال نقود">
-          <ArrowUpRight strokeWidth={1.6} />
+          <img src={navSend.url} alt="" />
         </button>
         <button type="button" className="nav-item" aria-label="طلب دفع">
-          <ArrowDownLeft strokeWidth={1.6} />
+          <img src={navRequest.url} alt="" />
         </button>
         <button type="button" className="nav-item" aria-label="الفواتير">
-          <Receipt strokeWidth={1.6} />
+          <img src={navBills.url} alt="" />
         </button>
         <button type="button" className="nav-item" aria-label="القائمة">
-          <Menu strokeWidth={1.6} />
+          <img src={navMenu.url} alt="" />
         </button>
       </nav>
     </div>
