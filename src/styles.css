@@ -164,14 +164,29 @@
   background-size: cover;
 }
 
-@utility status-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 2.75rem;
-  padding: max(0.35rem, env(safe-area-inset-top)) 1.75rem 0;
-  font: 700 1rem/1 var(--font-arabic);
+@utility progress-screen {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
 }
+
+.progress-mark {
+  width: min(56vw, 15rem);
+  height: auto;
+}
+
+.progress-arc {
+  transform-origin: 50px 50px;
+  animation: arc-spin 1.4s linear infinite;
+}
+
+@keyframes arc-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 
 @utility brand-lockup {
   position: absolute;
