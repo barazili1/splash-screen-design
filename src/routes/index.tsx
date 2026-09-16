@@ -3,6 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import backgroundAsset from "@/assets/instapay-background.jpeg.asset.json";
 import instapayLogo from "@/assets/instapay-logo.png";
 import ipnLogo from "@/assets/ipn-logo.png";
+import chevrons from "@/assets/chevrons.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
