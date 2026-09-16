@@ -567,7 +567,7 @@
   position: relative;
   display: grid;
   justify-items: center;
-  width: 3.4rem;
+  width: 4.6rem;
 }
 
 .tx-avatar > svg,
@@ -611,7 +611,8 @@
 
 .tx-avatar small {
   margin-top: 0.3rem;
-  font-size: 0.8rem;
+  white-space: nowrap;
+  font-size: 0.78rem;
   color: var(--home-text);
 }
 

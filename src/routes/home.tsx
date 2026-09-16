@@ -10,6 +10,7 @@ import {
   HandCoins,
   FileSymlink,
   Menu,
+  Smartphone,
   Home as HomeIcon,
 } from "lucide-react";
 import billsIllustration from "@/assets/bills-illustration.png";
@@ -186,7 +187,7 @@ function HomePage() {
           {transactions.map((tx, i) => (
             <li className="tx-row" key={i}>
               <div className="tx-head">
-                <strong>{tx.amount}</strong>
+                <strong dir="ltr">{tx.amount}</strong>
                 <div className="tx-status">
                   <span className="tx-badge">ناجحة</span>
                   <span className="tx-chevron" aria-hidden="true">
@@ -196,7 +197,7 @@ function HomePage() {
               </div>
               <div className="tx-body">
                 <div className="tx-avatar">
-                  {tx.out ? <ArrowUpRight strokeWidth={1.8} /> : <span>@</span>}
+                  {tx.out ? <Smartphone strokeWidth={1.8} /> : <span>@</span>}
                   <span className={`tx-dir ${tx.out ? "out" : "in"}`}>
                     {tx.out ? (
                       <ArrowUpRight strokeWidth={2.6} />
@@ -207,9 +208,9 @@ function HomePage() {
                   <small>{tx.kind}</small>
                 </div>
                 <div className="tx-info">
-                  <small>{tx.sub}</small>
+                  <small dir="ltr">{tx.sub}</small>
                   <p>{tx.name}</p>
-                  <time>{tx.date}</time>
+                  <time dir="ltr">{tx.date}</time>
                 </div>
               </div>
             </li>
