@@ -26,11 +26,6 @@ function Index() {
     >
 
       <div className="status-bar" aria-hidden="true">
-        <div className="status-left">
-          <span className="battery"><span>40</span></span>
-          <span className="wifi" />
-          <span className="signal"><i /><i /><i /><i /></span>
-        </div>
         <time>11:01</time>
       </div>
 
