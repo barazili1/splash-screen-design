@@ -17,6 +17,11 @@ import {
 import homeHeader from "@/assets/home-header.jpeg.asset.json";
 import bankLogo from "@/assets/bank-logo.png";
 import ipnLogo from "@/assets/ipn-logo.png";
+import navHome from "@/assets/nav-home.png.asset.json";
+import navSend from "@/assets/nav-send.png.asset.json";
+import navRequest from "@/assets/nav-request.png.asset.json";
+import navBills from "@/assets/nav-bills.png.asset.json";
+import navMenu from "@/assets/nav-menu.png.asset.json";
 
 export const Route = createFileRoute("/home")({
   head: () => ({
