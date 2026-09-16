@@ -27,10 +27,10 @@ function ProgressMark() {
       aria-label="جارٍ التحميل"
     >
       <defs>
-        <radialGradient id="sphereGrad" cx="50%" cy="32%" r="80%">
-          <stop offset="0%" stopColor="var(--splash-violet-bright)" />
-          <stop offset="55%" stopColor="var(--splash-violet)" />
-          <stop offset="100%" stopColor="var(--splash-violet-deep)" />
+        <radialGradient id="sphereGrad" cx="50%" cy="34%" r="85%">
+          <stop offset="0%" stopColor="var(--splash-violet)" />
+          <stop offset="60%" stopColor="var(--splash-violet-deep)" />
+          <stop offset="100%" stopColor="oklch(0.24 0.19 299)" />
         </radialGradient>
       </defs>
 

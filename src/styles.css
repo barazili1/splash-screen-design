@@ -172,7 +172,7 @@
 }
 
 .progress-mark {
-  width: min(56vw, 15rem);
+  width: min(23vw, 6.25rem);
   height: auto;
 }
 
