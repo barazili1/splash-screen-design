@@ -177,13 +177,15 @@
 }
 
 .progress-arc {
-  transform-origin: 50px 50px;
-  animation: arc-spin 1.4s linear infinite;
+  animation: arc-fill 1.4s linear infinite;
 }
 
-@keyframes arc-spin {
+@keyframes arc-fill {
+  from {
+    stroke-dashoffset: 283;
+  }
   to {
-    transform: rotate(360deg);
+    stroke-dashoffset: 0;
   }
 }
 
