@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   ArrowDownLeft,
   ArrowUpRight,
+  ArrowUpLeft,
+  ArrowDownRight,
   Receipt,
   Share2,
   QrCode,
@@ -167,9 +169,9 @@ function HomePage() {
                   {tx.out ? <Smartphone strokeWidth={1.8} /> : <span>@</span>}
                   <span className={`tx-dir ${tx.out ? "out" : "in"}`}>
                     {tx.out ? (
-                      <ArrowUpRight strokeWidth={2.6} />
+                      <ArrowUpLeft strokeWidth={2.6} />
                     ) : (
-                      <ArrowDownLeft strokeWidth={2.6} />
+                      <ArrowDownRight strokeWidth={2.6} />
                     )}
                   </span>
                   <small>{tx.kind}</small>
@@ -185,7 +187,12 @@ function HomePage() {
         </ul>
         <div className="powered">
           <small>POWERED BY</small>
-          <img src={ipnLogo} alt="IPN" loading="lazy" width={200} height={80} />
+          <span
+            className="ipn-mark"
+            role="img"
+            aria-label="IPN"
+            style={{ maskImage: `url(${ipnLogo})`, WebkitMaskImage: `url(${ipnLogo})` }}
+          />
         </div>
       </section>
 

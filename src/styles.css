@@ -656,9 +656,17 @@
   color: var(--home-purple);
 }
 
-.powered img {
-  width: 5.5rem;
-  height: auto;
+.ipn-mark {
+  display: block;
+  width: 6rem;
+  height: 2.2rem;
+  background: linear-gradient(90deg, var(--home-orange), var(--home-purple) 55%);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
 }
 
 @utility bottom-nav {
