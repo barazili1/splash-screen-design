@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
-  Bell,
   ArrowDownLeft,
   ArrowUpRight,
   Receipt,
@@ -13,7 +12,7 @@ import {
   Smartphone,
   Home as HomeIcon,
 } from "lucide-react";
-import billsIllustration from "@/assets/bills-illustration.png";
+import homeHeader from "@/assets/home-header.jpeg.asset.json";
 import bankLogo from "@/assets/bank-logo.png";
 import ipnLogo from "@/assets/ipn-logo.png";
 
