@@ -265,12 +265,10 @@
 
 .home-header-shape {
   position: absolute;
-  inset: -20% -35% auto -10%;
-  height: 130%;
-  background: linear-gradient(135deg, var(--home-orange), oklch(0.72 0.14 24));
-  clip-path: polygon(100% 0, 100% 100%, 26% 100%, 62% 46%, 18% 0);
-  opacity: 0.96;
-  transform: scaleX(-1);
+  inset: 0 -12% -18% 0;
+  background: linear-gradient(210deg, var(--home-orange), oklch(0.74 0.14 26));
+  clip-path: polygon(100% 0, 100% 100%, 30% 100%, 8% 0);
+  border-bottom-left-radius: 3.5rem;
 }
 
 .home-header-shape::after {
@@ -278,8 +276,8 @@
   position: absolute;
   inset: 0;
   background: var(--home-purple-bright);
-  clip-path: polygon(0 34%, 42% 0, 0 0);
-  opacity: 0.55;
+  clip-path: polygon(0 100%, 34% 100%, 8% 0, 0 0);
+  opacity: 0.85;
 }
 
 .home-header-row {
