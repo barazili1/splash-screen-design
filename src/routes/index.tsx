@@ -67,11 +67,18 @@ function ProgressMark() {
 
 function Index() {
   const [phase, setPhase] = useState<"splash" | "progress">("splash");
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const timer = window.setTimeout(() => setPhase("progress"), 1000);
-    return () => window.clearTimeout(timer);
-  }, []);
+    const showProgress = window.setTimeout(() => setPhase("progress"), 1000);
+    const goHome = window.setTimeout(() => {
+      navigate({ to: "/home" });
+    }, 3000);
+    return () => {
+      window.clearTimeout(showProgress);
+      window.clearTimeout(goHome);
+    };
+  }, [navigate]);
 
   return (
     <main
