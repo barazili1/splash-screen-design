@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import backgroundAsset from "@/assets/instapay-background.jpeg.asset.json";
 import instapayLogo from "@/assets/instapay-logo.png";
@@ -17,23 +18,78 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+function ProgressMark() {
+  return (
+    <svg
+      className="progress-mark"
+      viewBox="0 0 100 100"
+      role="img"
+      aria-label="جارٍ التحميل"
+    >
+      <defs>
+        <radialGradient id="sphereGrad" cx="50%" cy="34%" r="85%">
+          <stop offset="0%" stopColor="var(--splash-violet)" />
+          <stop offset="60%" stopColor="var(--splash-violet-deep)" />
+          <stop offset="100%" stopColor="oklch(0.24 0.19 299)" />
+        </radialGradient>
+      </defs>
+
+      {/* white ring */}
+      <circle cx="50" cy="50" r="45" fill="none" stroke="var(--splash-ink)" strokeWidth="5" />
+      {/* orange progress arc */}
+      <circle
+        className="progress-arc"
+        cx="50"
+        cy="50"
+        r="45"
+        fill="none"
+        stroke="var(--splash-orange)"
+        strokeWidth="5"
+        strokeLinecap="round"
+        strokeDasharray="38 245"
+      />
+      {/* violet sphere */}
+      <circle cx="50" cy="50" r="37" fill="url(#sphereGrad)" />
+      {/* Instapay chevrons */}
+      <g
+        fill="none"
+        stroke="var(--splash-ink)"
+        strokeWidth="10"
+        strokeLinejoin="miter"
+        strokeLinecap="butt"
+      >
+        <path d="M31 33 L52 50 L31 67" />
+        <path d="M50 33 L71 50 L50 67" />
+      </g>
+    </svg>
+  );
+}
+
 function Index() {
+  const [phase, setPhase] = useState<"splash" | "progress">("splash");
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => setPhase("progress"), 1000);
+    return () => window.clearTimeout(timer);
+  }, []);
+
   return (
     <main
       className="splash"
       aria-label="Instapay splash screen"
       style={{ backgroundImage: `url(${backgroundAsset.url})` }}
     >
-
-      <div className="status-bar" aria-hidden="true">
-        <time>11:01</time>
-      </div>
-
-      <section className="brand-lockup">
-        <p lang="ar" dir="rtl">أهلاً بك في</p>
-        <h1 className="sr-only">Instapay</h1>
-        <img src={instapayLogo} alt="Instapay" />
-      </section>
+      {phase === "splash" ? (
+        <section className="brand-lockup">
+          <p lang="ar" dir="rtl">أهلاً بك في</p>
+          <h1 className="sr-only">Instapay</h1>
+          <img src={instapayLogo} alt="Instapay" />
+        </section>
+      ) : (
+        <section className="progress-screen" aria-label="جارٍ التحميل">
+          <ProgressMark />
+        </section>
+      )}
 
       <footer className="splash-footer">
         <img src={ipnLogo} alt="IPN" />
