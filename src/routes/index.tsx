@@ -79,13 +79,13 @@ function Index() {
       aria-label="Instapay splash screen"
       style={{ backgroundImage: `url(${backgroundAsset.url})` }}
     >
-      {phase === "splash" ? (
-        <section className="brand-lockup">
-          <p lang="ar" dir="rtl">أهلاً بك في</p>
-          <h1 className="sr-only">Instapay</h1>
-          <img src={instapayLogo} alt="Instapay" />
-        </section>
-      ) : (
+      <section className="brand-lockup">
+        <p lang="ar" dir="rtl">أهلاً بك في</p>
+        <h1 className="sr-only">Instapay</h1>
+        <img src={instapayLogo} alt="Instapay" />
+      </section>
+
+      {phase === "progress" && (
         <section className="progress-screen" aria-label="جارٍ التحميل">
           <ProgressMark />
         </section>
