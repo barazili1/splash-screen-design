@@ -695,9 +695,11 @@
   cursor: pointer;
 }
 
-.nav-item svg {
+.nav-item svg,
+.nav-item img {
   width: 1.7rem;
   height: 1.7rem;
+  object-fit: contain;
 }
 
 .nav-item.active {
