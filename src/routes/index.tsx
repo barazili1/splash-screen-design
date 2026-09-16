@@ -52,18 +52,15 @@ function ProgressMark() {
       />
       {/* violet sphere */}
       <circle cx="50" cy="50" r="37" fill="url(#sphereGrad)" />
-      {/* Instapay chevrons */}
-      <g
-        fill="none"
-        stroke="var(--splash-ink)"
-        strokeWidth="10"
-        strokeLinejoin="miter"
-        strokeLinecap="butt"
-        transform="translate(50 50) scale(0.7056) translate(-50 -50)"
-      >
-        <path d="M31 33 L52 50 L31 67" />
-        <path d="M50 33 L71 50 L50 67" />
-      </g>
+      {/* Instapay chevrons — 25px wide inside the 85px mark (29.41 viewBox units) */}
+      <image
+        href={chevrons}
+        x={35.3}
+        y={37.68}
+        width={29.41}
+        height={24.63}
+        preserveAspectRatio="xMidYMid meet"
+      />
     </svg>
   );
 }
