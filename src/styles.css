@@ -158,58 +158,10 @@
   overflow: hidden;
   isolation: isolate;
   color: var(--splash-ink);
-  background:
-    radial-gradient(circle at 72% 35%, color-mix(in oklab, var(--splash-violet-bright) 78%, transparent), transparent 48%),
-    linear-gradient(151deg, var(--splash-violet-bright) 0%, var(--splash-violet) 49%, var(--splash-violet-deep) 100%);
-}
-
-@utility splash-pattern {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  overflow: hidden;
-}
-
-@utility violet-ribbon {
-  position: absolute;
-  width: 52%;
-  height: 128%;
-  transform: rotate(-44deg);
-  background: color-mix(in oklab, var(--splash-violet-deep) 33%, transparent);
-}
-
-@utility violet-ribbon-one {
-  top: -40%;
-  left: 34%;
-}
-
-@utility violet-ribbon-two {
-  top: 39%;
-  left: 64%;
-  width: 37%;
-  background: color-mix(in oklab, var(--splash-violet-deep) 42%, transparent);
-}
-
-@utility orange-ribbon {
-  position: absolute;
-  top: 57%;
-  left: -27%;
-  width: 102%;
-  height: 27%;
-  border-radius: 0 5rem 5rem 0;
-  transform: rotate(21deg);
-  background: linear-gradient(90deg, var(--splash-coral), var(--splash-orange));
-}
-
-@utility coral-ribbon {
-  position: absolute;
-  top: 71%;
-  left: -35%;
-  width: 112%;
-  height: 35%;
-  border-radius: 0 5rem 5rem 0;
-  transform: rotate(23deg);
-  background: color-mix(in oklab, var(--splash-coral) 94%, var(--splash-ink));
+  background-color: var(--splash-violet);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @utility status-bar {
@@ -279,13 +231,11 @@
   font: 400 clamp(1.35rem, 5vw, 2rem)/1.5 var(--font-arabic);
 }
 
-.brand-lockup h1 {
-  margin: 0;
-  color: var(--splash-ink);
-  font: 700 clamp(3.7rem, 16vw, 6.25rem)/0.8 var(--font-display);
-  font-style: italic;
-  letter-spacing: -0.09em;
-  transform: skewX(-8deg) scaleX(1.08);
+.brand-lockup img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 @utility splash-footer {
@@ -298,21 +248,11 @@
   gap: 0.2rem;
 }
 
-@utility ipn-mark {
-  position: relative;
-  font: italic 700 3.7rem/0.8 var(--font-display);
-  letter-spacing: -0.13em;
-  transform: skewX(-8deg);
-}
-
-@utility ipn-stripe {
-  position: absolute;
-  top: -0.24rem;
-  left: -0.12rem;
-  width: 1.15rem;
-  height: 0.38rem;
-  transform: skewX(-12deg);
-  background: var(--splash-ink);
+.splash-footer img {
+  display: block;
+  width: 5rem;
+  height: auto;
+  object-fit: contain;
 }
 
 .splash-footer small {
@@ -320,7 +260,3 @@
   letter-spacing: 0;
 }
 
-@media (min-width: 700px) {
-  .orange-ribbon { top: 54%; height: 30%; }
-  .coral-ribbon { top: 72%; height: 39%; }
-}
