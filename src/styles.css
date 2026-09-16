@@ -189,7 +189,8 @@
 
 .brand-lockup img {
   display: block;
-  width: 100%;
+  width: 62%;
+  margin: 0 auto;
   height: auto;
   object-fit: contain;
 }
